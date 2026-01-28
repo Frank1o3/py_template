@@ -1,0 +1,29 @@
+[project]
+name = "project_name" # should be changed
+version = "0.1.0"
+description = "Python Template repo/package"
+authors = [
+    {name = "Frank1o3",email = "jahdy1o3@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10, <3.15"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "mypy (>=1.19.1,<2.0.0)",
+    "ruff (>=0.14.14,<0.15.0)",
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "pytest-mock (>=3.15.1,<4.0.0)"
+]
+
+[tool.poetry.scripts]
+project-name = "project_name.__main__:main"
