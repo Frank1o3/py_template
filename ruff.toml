@@ -3,7 +3,6 @@ respect-gitignore = true
 
 # DO NOT enable unsafe fixes globally in a template
 fix = true
-unsafe-fixes = false
 
 [lint]
 select = [
@@ -34,6 +33,6 @@ known-first-party = ["project_name"]
 
 [format]
 quote-style = "double"
-indent-style = "space"
+indent-style = "tab"
 skip-magic-trailing-comma = false
 line-ending = "lf"
