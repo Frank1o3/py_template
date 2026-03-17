@@ -1,4 +1,5 @@
 [project]
+# 👇 rename this when using the template
 name = "project_name" # should be changed
 version = "0.1.0"
 description = "Python Template repo/package"
@@ -26,4 +27,6 @@ dev = [
 ]
 
 [tool.poetry.scripts]
+
+# 👇 rename this when using the template
 project-name = "project_name.__main__:main"

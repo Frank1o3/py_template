@@ -4,6 +4,8 @@ A minimal, strict Python project template using **Poetry**, **pytest**, **ruff**
 
 This repository is intended to be used as a **GitHub template** for starting new Python projects with a clean structure and modern tooling.
 
+Also remember to rename the dir in src
+
 ---
 
 ## Features
