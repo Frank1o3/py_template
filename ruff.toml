@@ -1,22 +1,28 @@
 line-length = 100
 respect-gitignore = true
 
-# DO NOT enable unsafe fixes globally in a template
 fix = true
+unsafe-fixes = false  # explicit — never auto-apply unsafe fixes in a template
+
+cache-dir = ".cache/ruff"
 
 [lint]
 select = [
-    "E",    # pycodestyle
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
     "F",    # pyflakes
     "I",    # import sorting
     "UP",   # pyupgrade
     "B",    # bugbear
     "SIM",  # simplify
-    "C4",   # comprehensions (very good signal)
+    "C4",   # comprehensions
     "PIE",  # misc improvements
+    "RUF",  # ruff-native rules
 ]
 ignore = [
-    "E501", # formatter handles line length
+    "E501",   # formatter handles line length
+    "B008",   # do not perform function calls in default args (too noisy)
+    "SIM108", # ternary operator (sometimes less readable)
 ]
 
 [lint.isort]
@@ -27,8 +33,8 @@ known-first-party = ["project_name"]
 
 [lint.per-file-ignores]
 "tests/**/*.py" = [
-    "S101",  # allow asserts
-    "D",     # no docstring requirements in tests
+    "S101",  # allow assert — NOTE: only useful if you add "S" to select later
+    "RUF",   # relax ruff-native rules in tests
 ]
 
 [format]

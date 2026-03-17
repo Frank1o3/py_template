@@ -1,4 +1,8 @@
-.PHONY: fmt lint typecheck test check
+.PHONY: fmt lint typecheck test check install clean
+
+# ── Dev helpers ────────────────────────────────
+install:
+	poetry install
 
 fmt:
 	poetry run ruff format .
@@ -12,4 +16,14 @@ typecheck:
 test:
 	poetry run pytest
 
-check: fmt lint typecheck
+# ── Shortcuts ──────────────────────────────────
+ruff: fmt lint
+
+# ── CI-safe: verify only, no modifications ─────
+check: lint typecheck test
+
+clean:
+	find . -type d -name __pycache__ -exec rm -rf {} +
+	find . -type d -name .mypy_cache -exec rm -rf {} +
+	find . -type d -name .pytest_cache -exec rm -rf {} +
+	find . -type d -name .cache -exec rm -rf {} +

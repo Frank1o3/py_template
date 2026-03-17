@@ -27,6 +27,9 @@ dev = [
 ]
 
 [tool.poetry.scripts]
-
 # 👇 rename this when using the template
 project-name = "project_name.__main__:main"
+
+[tool.pytest.ini_options]
+cache_dir = ".cache/pytest"
+testpaths = ["tests"]
