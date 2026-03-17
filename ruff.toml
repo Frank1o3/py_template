@@ -33,6 +33,6 @@ known-first-party = ["project_name"]
 
 [format]
 quote-style = "double"
-indent-style = "tab"
+indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "lf"
