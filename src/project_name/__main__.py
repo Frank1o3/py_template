@@ -28,9 +28,9 @@ def main() -> None:
     sys.stdout.flush()
 
     try:
-        noice_print("This is a Template!", term_line=1, duration=1.0)
-        noice_print("Made by Frank1o3...", term_line=2, duration=1.0)
-        noice_print("Comes with niche updates/fixes..", term_line=3, duration=1.0)
+        noice_print("This is a Template!", term_line=1, duration=2.3)
+        noice_print("Made by Frank1o3.", term_line=2, duration=5.4)
+        noice_print("Comes with niche updates/fixes.", term_line=3, duration=6.2)
 
         # Move cursor below the last line when done
         sys.stdout.write("\033[4;0H")

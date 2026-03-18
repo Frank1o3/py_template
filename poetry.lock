@@ -465,6 +465,18 @@ pytest = ">=6.2.5"
 dev = ["pre-commit", "pytest-asyncio", "tox"]
 
 [[package]]
+name = "pytoml"
+version = "0.1.21"
+description = "A parser for TOML-0.4.0"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "pytoml-0.1.21-py2.py3-none-any.whl", hash = "sha256:57a21e6347049f73bfb62011ff34cd72774c031b9828cb628a752225136dfc33"},
+    {file = "pytoml-0.1.21.tar.gz", hash = "sha256:8eecf7c8d0adcff3b375b09fe403407aa9b645c499e5ab8cac670ac4a35f61e7"},
+]
+
+[[package]]
 name = "ruff"
 version = "0.14.14"
 description = "An extremely fast Python linter and code formatter, written in Rust."
@@ -566,4 +578,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.15"
-content-hash = "0c4d637348d315c9b2bbf14e6be42b7bdde0381c07cc340f8dd0736a0ecaeae8"
+content-hash = "fef9716480191878f976a67cc4432d68f2126751cdf33e0ac24ed9167b2f2ba6"
