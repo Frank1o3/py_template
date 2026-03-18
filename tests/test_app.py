@@ -4,7 +4,7 @@ from unittest.mock import call, patch
 
 import pytest
 
-from project_name.__main__ import main, noice_print
+from project_name.cli import main, noice_print
 
 
 class TestNoicePrint:
